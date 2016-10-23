@@ -1,6 +1,7 @@
 # Reproducible Research: Peer Assessment 1 - Murray Thompson
 
- ----------
+
+
 ## Loading and preprocessing the data
 
 
@@ -13,7 +14,9 @@ library(ggplot2)#for producing plots
 library(stats) #for agggregating data
 ```
 
- ----------
+
+----------
+
 ## What is mean total number of steps taken per day?
 
 
@@ -57,7 +60,8 @@ average_daily_steps <- mean(steps_by_date$steps)
 
 
 
- ----------
+----------
+
 ## What is the average daily activity pattern?
 
 
@@ -73,14 +77,16 @@ plot(steps_by_interval,type="l")
 
 ```r
 #Interval with maximum average daily steps
-max_ave_steps_interval <- steps_by_interval[steps_by_interval$steps==max(steps_by_interval$steps), "interval"]
+max_ave_steps_interval <- 
+  steps_by_interval[steps_by_interval$steps==max(steps_by_interval$steps), "interval"]
 ```
 
 
 **Minute interval with the maximum average daily steps: ** 835
 
 
- ----------
+----------
+
 ## Imputing missing values
 
 
@@ -152,6 +158,7 @@ average_daily_diff <- average_daily_steps_filled - average_daily_steps
 
 
 ----------
+
 ## Are there differences in activity patterns between weekdays and weekends?
 
 

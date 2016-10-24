@@ -25,7 +25,7 @@ library(stats) #for agggregating data
 
 ## What is mean total number of steps taken per day?
 
-```{r echo = TRUE}
+```{r 2_original_steps_per_day, echo = TRUE}
 #find the total number of steps taken per day
 steps_by_date <- aggregate(steps ~ date, step_data, sum)
 
@@ -60,7 +60,7 @@ average_daily_steps <- mean(steps_by_date$steps)
 
 ## What is the average daily activity pattern?
 
-```{r echo = TRUE}
+```{r 3_average_steps_per_interval, echo = TRUE}
 #Find the average daily steps per interval
 steps_by_interval <- aggregate(steps ~ interval, step_data, mean)
 
@@ -81,7 +81,7 @@ max_ave_steps_interval <-
 
 ## Imputing missing values
 
-```{r echo = TRUE}
+```{r 4_imputing_missing_values, echo = TRUE}
 
 #find the amount of intervals with missing step data
 steps_missing <- !complete.cases(step_data)
@@ -140,7 +140,7 @@ average_daily_diff <- average_daily_steps_filled - average_daily_steps
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-```{r echo = TRUE}
+```{r 5_day_type_activity_patterns, echo = TRUE}
 
 #create a factor to distinguish bewtween weekend and weekday dates
 step_data_filled$day_of_week <- weekdays(as.Date(step_data_filled$date))

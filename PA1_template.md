@@ -43,7 +43,7 @@ qplot(steps_by_date$steps,
 ## will replace the existing scale.
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](PA1_template_files/figure-html/2_original_steps_per_day-1.png)<!-- -->
 
 ```r
 #Aggregate total daily step values 
@@ -73,7 +73,7 @@ steps_by_interval <- aggregate(steps ~ interval, step_data, mean)
 plot(steps_by_interval,type="l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](PA1_template_files/figure-html/3_average_steps_per_interval-1.png)<!-- -->
 
 ```r
 #Interval with maximum average daily steps
@@ -126,7 +126,7 @@ qplot(steps_by_date_filled$steps.x,
 ## will replace the existing scale.
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/4_imputing_missing_values-1.png)<!-- -->
 
 ```r
 #Aggregate total daily step values, using filled in data
@@ -185,5 +185,5 @@ ggplot(steps_by_interval_dayType_filled,
        x="Minute Interval During day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](PA1_template_files/figure-html/5_day_type_activity_patterns-1.png)<!-- -->
 
